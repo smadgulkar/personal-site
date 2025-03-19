@@ -63,7 +63,7 @@ export default function Home() {
             Shubhankar.
           </h1>
           <h2 className="text-5xl sm:text-6xl font-bold text-zinc-400 tracking-tight">
-            I'm a coder and a quant.
+            I&apos;m a coder and a quant.
           </h2>
           <p className="max-w-xl text-lg text-zinc-400 leading-relaxed">
           By day, I manage a quantamental strategy at a hedge fund. By night (and weekends!), I build software.  I love crafting solutions with Python, Rust, Next.js, and diving into the possibilities of LLMs.
@@ -211,13 +211,13 @@ export default function Home() {
           </h2>
           <div className="space-y-6 text-lg text-zinc-300 leading-relaxed">
             <p>
-            Hello! I'm Shubhankar, a self-taught software developer and quantitative portfolio manager. My journey began with a fascination for problem-solving, which naturally led me to coding. I've found a unique synergy between my financial expertise and my passion for building software.
+            Hello! I&apos;m Shubhankar, a self-taught software developer and quantitative portfolio manager. My journey began with a fascination for problem-solving, which naturally led me to coding. I&apos;ve found a unique synergy between my financial expertise and my passion for building software.
             </p>
             <p>
             During the day, I manage a quantamental strategy at a hedge fund, leveraging data analysis and algorithmic approaches. Outside of finance, I immerse myself in building applications that solve real-world problems or simply bring joy. My projects range from efficient data pipelines and web applications built with Next.js, to exploring the cutting-edge potential of LLMs. I'm particularly interested in Rust for its performance and reliability, and I use Python extensively for its versatility.
             </p>
             <p>
-            My goal is to create impactful technology that bridges the gap between complex data and intuitive user experiences. I'm always eager to learn new technologies and collaborate on exciting projects.  I believe my diverse skill set, combining financial acumen with technical proficiency, offers a unique perspective.
+            My goal is to create impactful technology that bridges the gap between complex data and intuitive user experiences. I&apos;m always eager to learn new technologies and collaborate on exciting projects.  I believe my diverse skill set, combining financial acumen with technical proficiency, offers a unique perspective.
             </p>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default function Home() {
             or just want to say hi, I&apos;ll try my best to get back to you!
           </p>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:shubhankar.madgulkar@gmail.com"
             className="group inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 transition-colors"
           >
             Say Hello
