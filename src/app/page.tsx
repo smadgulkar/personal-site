@@ -5,7 +5,10 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  image: string;
+  media: {
+    type: 'image' | 'video';
+    url: string;
+  };
   link: string;
   github?: string;
   tech: string[];
@@ -16,10 +19,36 @@ const projects: Project[] = [
     id: "spren",
     title: "Spren",
     description: "AI-powered terminal assistant that converts natural language to shell commands. Supports PowerShell, Bash, and CMD with intelligent command suggestions and safety checks.",
-    image: "/spren.png",
+    media: {
+      type: 'video',
+      url: '/spren-demo.mp4',
+    },
     link: "https://smadgulkar.github.io/spren",
     github: "https://github.com/smadgulkar/spren",
-    tech: ["Python", "OpenAI", "Shell Scripting"],
+    tech: ["Rust", "OpenAI", "Shell Scripting"],
+  },
+  {
+    id: "arxiv",
+    title: "Arxiv Scraper",
+    description: "Scrapes arxiv.org for papers related to quantitative research and trading, uses AI to summarize papers that meet certain thresholds. Runs a daily process and sends a Teams message with the summarized papers.",
+    media: {
+      type: 'image',
+      url: '/arxiv-logo.mp4',
+    },
+    link: "https://github.com/smadgulkar/arxiv-scraper",
+    tech: ["Python"],
+  },
+  {
+    id: "html-game",
+    title: "Lunar Lander",
+    description: "A simple HTML game where the player controls a lunar lander to safely land on the moon. The game features a retro pixel art style and a simple physics engine.",
+    media: {
+      type: 'image',
+      url: '/lunar-lander.png',
+    },
+    link: "http://lunar-lander-flame.vercel.app",
+    github: "https://github.com/smadgulkar/html-game",
+    tech: ["HTML", "Javascript", "CSS"],
   },
 ];
 
@@ -34,11 +63,10 @@ export default function Home() {
             Shubhankar.
           </h1>
           <h2 className="text-5xl sm:text-6xl font-bold text-zinc-400 tracking-tight">
-            I craft digital experiences.
+            I'm a coder and a quant.
           </h2>
           <p className="max-w-xl text-lg text-zinc-400 leading-relaxed">
-            I&apos;m a software developer specializing in building exceptional digital experiences.
-            Currently, I&apos;m focused on creating accessible, human-centered applications.
+          By day, I manage a quantamental strategy at a hedge fund. By night (and weekends!), I build software.  I love crafting solutions with Python, Rust, Next.js, and diving into the possibilities of LLMs.
           </p>
           <div className="pt-4">
             <Link
@@ -80,16 +108,27 @@ export default function Home() {
               key={project.id}
               className="group relative grid md:grid-cols-12 gap-8 items-center"
             >
-              {/* Project Image */}
+              {/* Project Media */}
               <div className="md:col-span-7">
                 <Link href={project.link} target="_blank" rel="noopener noreferrer">
                   <div className="relative aspect-video overflow-hidden rounded-lg project-card bg-zinc-900">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                    {project.media.type === 'video' ? (
+                      <video
+                        src={project.media.url}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <Image
+                        src={project.media.url}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    )}
                   </div>
                 </Link>
               </div>
@@ -172,14 +211,13 @@ export default function Home() {
           </h2>
           <div className="space-y-6 text-lg text-zinc-300 leading-relaxed">
             <p>
-              Hello! I&apos;m Shubhankar, a software developer passionate about creating
-              technology that enriches people&apos;s lives. I enjoy building everything
-              from small utilities to rich interactive web applications.
+            Hello! I'm Shubhankar, a self-taught software developer and quantitative portfolio manager. My journey began with a fascination for problem-solving, which naturally led me to coding. I've found a unique synergy between my financial expertise and my passion for building software.
             </p>
             <p>
-              My focus is on crafting clean, efficient code and intuitive user
-              experiences. I&apos;m constantly learning and exploring new technologies
-              to stay at the forefront of web development.
+            During the day, I manage a quantamental strategy at a hedge fund, leveraging data analysis and algorithmic approaches. Outside of finance, I immerse myself in building applications that solve real-world problems or simply bring joy. My projects range from efficient data pipelines and web applications built with Next.js, to exploring the cutting-edge potential of LLMs. I'm particularly interested in Rust for its performance and reliability, and I use Python extensively for its versatility.
+            </p>
+            <p>
+            My goal is to create impactful technology that bridges the gap between complex data and intuitive user experiences. I'm always eager to learn new technologies and collaborate on exciting projects.  I believe my diverse skill set, combining financial acumen with technical proficiency, offers a unique perspective.
             </p>
           </div>
         </div>
