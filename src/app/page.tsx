@@ -28,12 +28,24 @@ const projects: Project[] = [
     tech: ["Rust", "OpenAI", "Shell Scripting"],
   },
   {
+    id: "newsmonger",
+    title: "Newsmonger",
+    description: "Scrapes RSS for news on selected companies and populates a well styled dashboard",
+    media: {
+      type: 'image',
+      url: '/newsmonger.png',
+    },
+    link: "http://newsmonger.vercel.app",
+    github: "https://github.com/smadgulkar/newsmonger",
+    tech: ["Python", "Next.js", "Tailwind CSS"],
+  },
+  {
     id: "arxiv",
     title: "Arxiv Scraper",
     description: "Scrapes arxiv.org for papers related to quantitative research and trading, uses AI to summarize papers that meet certain thresholds. Runs a daily process and sends a Teams message with the summarized papers.",
     media: {
       type: 'image',
-      url: '/arxiv-logo.mp4',
+      url: '/arxiv-logo.png',
     },
     link: "https://github.com/smadgulkar/arxiv-scraper",
     tech: ["Python"],
