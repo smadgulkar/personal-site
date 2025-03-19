@@ -75,7 +75,7 @@ export default function Home() {
             </h2>
           </div>
 
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.id}
               className="group relative grid md:grid-cols-12 gap-8 items-center"
@@ -109,7 +109,7 @@ export default function Home() {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs font-mono text-zinc-500"
+                        className="px-3 py-1 text-xs font-mono text-emerald-400 bg-emerald-500/10 rounded-full border border-emerald-500/20"
                       >
                         {tech}
                       </span>
