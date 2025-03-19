@@ -96,22 +96,22 @@ export default function Home() {
 
       {/* Work Section */}
       <section id="work" className="py-32 scroll-mt-32">
-        <div className="space-y-32">
+        <div className="space-y-12">
           <div className="sticky top-24 z-10 -mx-6 mb-16 px-6 py-4 bg-zinc-950/80 backdrop-blur-sm border-y border-zinc-900">
             <h2 className="text-2xl font-bold text-zinc-100">
               <span className="text-emerald-500">#</span> Selected Work
             </h2>
           </div>
 
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="group relative grid md:grid-cols-12 gap-8 items-center"
-            >
-              {/* Project Media */}
-              <div className="md:col-span-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="group relative flex flex-col bg-zinc-900/50 rounded-lg overflow-hidden"
+              >
+                {/* Project Media */}
                 <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                  <div className="relative aspect-video overflow-hidden rounded-lg project-card bg-zinc-900">
+                  <div className="relative aspect-video overflow-hidden bg-zinc-900">
                     {project.media.type === 'video' ? (
                       <video
                         src={project.media.url}
@@ -131,20 +131,16 @@ export default function Home() {
                     )}
                   </div>
                 </Link>
-              </div>
 
-              {/* Project Info */}
-              <div className="md:col-span-5">
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-zinc-100">
+                {/* Project Info */}
+                <div className="flex flex-col flex-grow p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-zinc-100">
                     {project.title}
                   </h3>
-                  <div className="p-6 rounded-lg bg-zinc-900/50 backdrop-blur-sm">
-                    <p className="text-zinc-300 leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-3">
+                  <p className="text-zinc-300 text-sm leading-relaxed flex-grow">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-4">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
@@ -154,7 +150,7 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 pt-4">
                     {project.github && (
                       <Link
                         href={project.github}
@@ -198,8 +194,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
