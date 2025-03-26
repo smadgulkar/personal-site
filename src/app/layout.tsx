@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   title: "Shubhankar | Developer",
   description: "Software developer specializing in modern web applications",
 };
+
 
 export default function RootLayout({
   children,
@@ -20,6 +22,7 @@ export default function RootLayout({
       <body className={`${jetbrains.className} bg-zinc-950 text-zinc-100 selection:bg-emerald-500/20 selection:text-emerald-500`}>
         <div className="relative min-h-screen">
           {/* Navigation */}
+          <Analytics />
           <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-sm border-b border-zinc-900">
             <nav className="max-w-7xl mx-auto px-6 py-6">
               <div className="flex justify-between items-center">
