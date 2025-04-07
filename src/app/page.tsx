@@ -51,6 +51,17 @@ const projects: Project[] = [
     tech: ["Python"],
   },
   {
+    id: "research-assistant",
+    title: "Research Assistant",
+    description: "Research Assistant is a Chrome extension that uses a LLM to summarize web pages and generate key points. These can be saved to local knowledge base for easy retrieval and analysis. Users can bring their own LLM and all data is stored locally.",
+    media: {
+      type: 'image',
+      url: '/icon128.png',
+    },
+    link: "https://chromewebstore.google.com/detail/research-assistant/idkghcjlmgaiodkjgfcfijjkdcoakanl",
+    tech: ["Generative AI","HTML", "Javascript", "CSS"],
+  },
+  {
     id: "html-game",
     title: "Lunar Lander",
     description: "A simple HTML game where the player controls a lunar lander to safely land on the moon. The game features a retro pixel art style and a simple physics engine.",
