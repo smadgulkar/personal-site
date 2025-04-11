@@ -7,8 +7,8 @@ import { Analytics } from "@vercel/analytics/react";
 const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shubhankar | Developer",
-  description: "Software developer specializing in modern web applications",
+  title: "Shubhankar Madgulkar| Software Developer & Quantitative Portfolio Manager",
+  description: "Shubhankar Madgulkar's portfolio showcases coding projects in Python, Rust, and Next.js, alongside expertise in quantamental strategies and LLMs. See web applications and solutions.",
 };
 
 
