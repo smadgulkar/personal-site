@@ -21,7 +21,7 @@ const projects: Project[] = [
     description: "AI-powered terminal assistant that converts natural language to shell commands. Supports PowerShell, Bash, and CMD with intelligent command suggestions and safety checks.",
     media: {
       type: 'video',
-      url: '/spren-demo.mp4',
+      url: '/spren-demo',
     },
     link: "https://smadgulkar.github.io/spren",
     github: "https://github.com/smadgulkar/spren",
